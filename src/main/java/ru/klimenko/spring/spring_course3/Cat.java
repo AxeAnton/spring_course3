@@ -8,7 +8,7 @@ public class Cat implements Pet {
     public Cat() {
         System.out.println("Cat bean is created");
     }
-    // 34 - это сообщение для диагностики-> dog
+     // 34 - это сообщение для диагностики-> dog
 
     @Override
     public void say() {

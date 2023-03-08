@@ -7,7 +7,7 @@ public class Dog implements Pet {
     public Dog() {
         System.out.println("Dog bean is created");
     }
-    // 35 - это сообщение для диагностики-> test3
+     // 35 - это сообщение для диагностики-> test3
 
     /*    public String getName() {
             return name;

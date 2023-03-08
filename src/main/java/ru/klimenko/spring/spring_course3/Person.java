@@ -33,7 +33,7 @@ public class Person {
 
     public void setSurname(String surname) {
         System.out.println("Class Person: set surname");
-        // 47 - диагностическое сообщение
+         // 47 - диагностическое сообщение
         this.surname = surname;
     }
 

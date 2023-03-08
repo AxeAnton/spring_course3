@@ -14,8 +14,8 @@ http://www.springframework.org/schema/context/spring-context.xsd">
           destroy-method="destroy"
           scope="prototype"
     >
-        <!--из данного тега убираем scope="prototype"-->
-        <!--заменяем singleton на prototype-->
+           <!--из данного тега убираем scope="prototype"-->
+           <!--заменяем singleton на prototype-->
 
     </bean>
 

@@ -9,7 +9,7 @@ public class Test5 {
         Dog myDog = context.getBean("myPet", Dog.class);
         myDog.say();
 /*
-        Dog bean is created
+         Dog bean is created
         Class Dog: init method
         Bow-Bow
         Class Dog: destroy method

@@ -17,7 +17,7 @@ public class Test4 {
 
 //        System.out.println(mayDog.getName());
 //        System.out.println(yourDog.getName());
- /*     Dog bean is created
+ /*      Dog bean is created
         Dog bean is created
         Belka
         Strelka

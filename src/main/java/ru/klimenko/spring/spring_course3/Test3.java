@@ -22,7 +22,7 @@ person.callYourPet();
         Person person = context.getBean("myPerson", Person.class);
 //        30 - создаем бин person, а все остальное будит за кулисами создано.
         person.callYourPet();
-//      31 - далее понятно, вызываем метод и получаем результат.-> конспект
+//       31 - далее понятно, вызываем метод и получаем результат.-> конспект
 
         // 36 - теперь запускаем run и видим, отрабатывает все по порядку -
         // 31.1 - создался бин кат - Cat bean is created,Class Person: Set Pet

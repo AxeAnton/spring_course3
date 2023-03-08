@@ -36,6 +36,7 @@ http://www.springframework.org/schema/context/spring-context.xsd">
         <property name="age" value="${person.age}"/>
         <!-- 53 -Вместо возраста "44" - ${person.age} -> test3-->
         <!--45 - далее в тегах проперти прописываем зависимость куда будут добавлены данные (то есть данные добавляются благодаря сеттерам (setAge, setSurname) данных свойств)-> test3 -->
+
     </bean>
 
 
