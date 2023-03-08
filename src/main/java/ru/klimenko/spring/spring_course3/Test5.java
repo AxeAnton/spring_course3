@@ -1,7 +1,7 @@
 package ru.klimenko.spring.spring_course3;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
+// тест
 public class Test5 {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
@@ -33,6 +33,6 @@ public class Test5 {
         Class Dog: init method
         Bow-Bow
 */
-
+// тест
     }
 }
