@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--// 12 вот это все просто скопировали с файла, данная конфигурация позволяет использовать Спринг файлы. -->
+
+    <context:property-placeholder location="classpath:application.properties"/>
+<!--51 - в этом месте до написания бинов, пишим данную строчку, где classpath это место нахождения пользовательских файлов, классы из папки resources, это - application.properties соответственно наша папка-->
+    <bean id="myPet"
+          class="ru.klimenko.spring.spring_course3.Dog">
+        <!--// 12 Первое, bean в Spring означает ОБЪЕКТ! Второе прописываем id нужен для того, что бы когда будет необходимо позвать объект из Spring контейнера мы могли это сделать спомощью id-->
+        <!--// 13 это тег class и в него просто прописываем имя класс какого то животного, или какой-то класс, объект которого будет создавать конрейнер -> конспект-->
+    </bean>
+
+    <bean id="myPerson"
+          class="ru.klimenko.spring.spring_course3.Person">
+        <!--  <constructor-arg ref="myPet"/>-->
+        <!--// 40 - комментируем -->
+        <!-- // 27 - теперь добавляем id и адрес class Person, но это еще не все, т.к Person имеет зависимость Pet в конструкторе, мы должны добавить аргумент коструктора - constructor-arg и ссылку на дин который помещается в коструктор ref="myPet"  -->
+        <!-- // 28 вообщем, что имеем два бина myPet и myPerson и в бин myPerson помещен myPet -> test3-->
+        <property name="pet" ref="myPet"/>
+        <!--// 41 - property тег и пишим имя сеттора, конвертация происходит вот так pet становится setPet, и в параметр указываем ссылку на наше животное -->
+        <!--// 42 - теперь если запустить test3 получим
+         // 42.1 - создался бин кат - Cat bean is created,Class Person: Set Pet
+        // 42.2 - создался бин первсон - Person bean is created
+        // 42.3 - установили зависимость персону от животного Class Person: Set Pet
+        // 42.4 - дальше понятно - Heel, my lovely Pet!
+        // 42.5 - Mau-Mau -> конспект
+        -->
+        <property name="surname" value="${person.surname}"/>
+        <!-- 52 -Вместо фамилии Klimenko пишим ${person.surname}-->
+        <property name="age" value="${person.age}"/>
+        <!-- 53 -Вместо возраста "44" - ${person.age} -> test3-->
+        <!--45 - далее в тегах проперти прописываем зависимость куда будут добавлены данные (то есть данные добавляются благодаря сеттерам (setAge, setSurname) данных свойств)-> test3 -->
+    </bean>
+
+
+</beans>
