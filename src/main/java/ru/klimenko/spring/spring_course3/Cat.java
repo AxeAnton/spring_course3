@@ -14,6 +14,6 @@ public class Cat implements Pet {
     public void say() {
         System.out.println("Mau-Mau");
     }
-
+    // test11111
     // 9. Написали метод -> test1
 }
