@@ -23,7 +23,7 @@ http://www.springframework.org/schema/context/spring-context.xsd">
         <!-- // 27 - теперь добавляем id и адрес class Person, но это еще не все, т.к Person имеет зависимость Pet в конструкторе, мы должны добавить аргумент коструктора - constructor-arg и ссылку на дин который помещается в коструктор ref="myPet"  -->
         <!-- // 28 вообщем, что имеем два бина myPet и myPerson и в бин myPerson помещен myPet -> test3-->
         <property name="pet" ref="myPet"/>
-        <!--// 41 - property тег и пишим имя сеттора, конвертация происходит вот так pet становится setPet, и в параметр указываем ссылку на наше животное -->
+        <!--// 41 - property тег и пишем имя сеттора, конвертация происходит вот так pet становится setPet, и в параметр указываем ссылку на наше животное -->
         <!--// 42 - теперь если запустить test3 получим
          // 42.1 - создался бин кат - Cat bean is created,Class Person: Set Pet
         // 42.2 - создался бин первсон - Person bean is created

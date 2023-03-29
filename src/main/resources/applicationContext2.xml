@@ -8,14 +8,29 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd">
 
 
+<!--    <bean id="myPet"
+          class="ru.klimenko.spring.spring_course3.Dog"
+          scope="singleton"
+          // 58 - Создали, вот эти две строчки и пока все, при этом здесь скоп singleton по умолчанию и его можно не прописывать -> test4
+>-->
+<!--    <bean id="myPet"
+          class="ru.klimenko.spring.spring_course3.Dog"
+          scope="prototype"
+      // 66 - меняем скоп на prototype -> test4
+>-->
+<!--    <bean id="myPet"
+          class="ru.klimenko.spring.spring_course3.Dog"
+          init-method="init"
+          destroy-method="destroy"
+      // 73 - помечаем в конфиг файле, что добавили данные методы init и destroy -> создаем test5
+>-->
+
     <bean id="myPet"
           class="ru.klimenko.spring.spring_course3.Dog"
           init-method="init"
           destroy-method="destroy"
           scope="prototype"
     >
-           <!--из данного тега убираем scope="prototype"-->
-           <!--заменяем singleton на prototype-->
 
     </bean>
 

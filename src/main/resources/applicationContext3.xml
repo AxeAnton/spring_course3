@@ -7,6 +7,16 @@ http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd">
 
-  <context:component-scan base-package="ru.klimenko.spring.spring_course3"/>
+
+    <context:component-scan base-package="ru.klimenko.spring.spring_course3"/>
+    <!-- 81 - создаем в теге данную сторочку ознеачает:
+     сканируем анатации компонент - component-scan
+     в классах пакетеа  base-package="ru.klimenko.spring.spring_course3" => Cat -->
+
+     <!--  Это так для инфо - C:\Users\Антон\IdeaProjects\spring_course3\src\main\resources\application.properties-->
+
+<!--    <context:property-placeholder location="classpath:application.properties"/>-->
+    <!--112 кометируем данную строчку? тогда надо убрать и аннотации в Person =>Person-->
+    <!--107 пишем вот такую строчку в конфиг файл и добовляем адрес нашего проперти файла - application.properties=> Person -->
 
 </beans>
