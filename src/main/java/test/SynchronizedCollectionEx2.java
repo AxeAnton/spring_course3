@@ -1,0 +1,41 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
+public class SynchronizedCollectionEx2 {
+    public static void main(String[] args) throws InterruptedException {
+// TODO Важно для БЕЗПАСТНОЙ РАБОТЫ С ПОТОКАМИ необходимо импоьлзовать потокобезопасные коллекции и потоко безопастный блок synchronized!!! Только коллекций не достаточно
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int i = 0; i < 13; i++) {
+            arrayList.add(i);
+        }
+        System.out.println(arrayList);
+
+        List<Integer> synchList = Collections.synchronizedList(arrayList);
+
+        Runnable runnable1 = () -> {
+            synchronized (synchList) {
+                Iterator<Integer> iterator = synchList.iterator();
+                while (iterator.hasNext()) {
+                    System.out.println(iterator.next());
+                }
+            }
+        };
+        Runnable runnable2 = () -> synchList.remove(10);
+
+
+
+        Thread thread1 = new Thread(runnable1);
+        Thread thread2 = new Thread(runnable2);
+        thread1.start();
+        thread2.start();
+        thread1.join();
+        thread2.join();
+        System.out.println(synchList);
+    }
+}
+
+

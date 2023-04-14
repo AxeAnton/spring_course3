@@ -18,13 +18,12 @@ public class Main {
         System.out.println("arrayListTxt - " + arrayListTxt);
 
         CreatArrays creatArrays = new CreatArrays();
-        creatArrays.creatArr(arrayListTxt, 4, 2);
+        creatArrays.creatArr(arrayListTxt, 4, 4);
         System.out.println(creatArrays);
 
         CompareArrays compareArrays = new CompareArrays();
         compareArrays.compArrays(creatArrays, arrayListTxt);
 
     }
-
 }
 
