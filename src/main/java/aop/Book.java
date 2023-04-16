@@ -1,7 +1,7 @@
 package aop;
 
 import org.springframework.beans.factory.annotation.Value;
-// тест 1
+// тест 3
 public class Book {
     @Value("Преступление и наказание")
     private String name;
